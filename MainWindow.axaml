@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Width="200" Height="200"
+        x:Class="avalonia_contextmenu_issue.MainWindow"
+        Title="avalonia_contextmenu_issue">
+
+  <Panel Margin="20">
+
+    <Panel.Styles>
+      <Style Selector="ContextMenu">
+        <!-- this isn't working when horizontal offset is negative -->
+        <Setter Property="HorizontalOffset" Value="-25"/>
+      </Style>
+    </Panel.Styles>
+    
+    <Button Content="Click Me" Click="Button_OnClick"/>
+
+  </Panel>
+
+</Window>
